@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="310.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.RootController">
+   <children>
+      <Label layoutX="185.0" layoutY="20.0" text="로그인" />
+      <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="153.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="93.0" layoutY="170.0" text="아 이 디" />
+      <Label layoutX="91.0" layoutY="208.0" text="비밀번호" />
+      <TextField fx:id="textId" layoutX="173.0" layoutY="166.0" />
+      <PasswordField fx:id="textPassword" layoutX="173.0" layoutY="204.0" />
+      <Button fx:id="btnLogin" layoutX="112.0" layoutY="255.0" mnemonicParsing="false" text="로그인" />
+      <Button fx:id="btnClose" layoutX="232.0" layoutY="255.0" mnemonicParsing="false" text="닫   기" />
+      <Separator layoutX="17.0" layoutY="156.0" prefHeight="1.0" prefWidth="359.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <TabPane layoutX="7.0" layoutY="4.0" prefHeight="740.0" prefWidth="1090.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="첫번째 화면">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="740.0" prefWidth="1090.0" style="-fx-background-color: lightgray;">
+                     <children>
+                        <Label layoutX="1.0" layoutY="10.0" text="성적입력" />
+                        <Label layoutX="1.0" layoutY="40.0" text="성명 : " />
+                        <Label layoutX="1.0" layoutY="99.0" text="국어 : " />
+                        <Label layoutX="1.0" layoutY="129.0" text="수학 : " />
+                        <Label layoutX="1.0" layoutY="159.0" text="사회 : " />
+                        <Label layoutX="121.0" layoutY="99.0" text="영어 : " />
+                        <Label layoutX="121.0" layoutY="129.0" text="과학 : " />
+                        <Label layoutX="121.0" layoutY="159.0" text="음악 : " />
+                        <Separator layoutX="9.0" layoutY="185.0" prefHeight="1.0" prefWidth="262.0" />
+                        <Label layoutX="1.0" layoutY="193.0" text="성적입력" />
+                        <Label layoutX="119.0" layoutY="212.0" text="평균 : " />
+                        <Label layoutX="1.0" layoutY="212.0" text="총점 : " />
+                        <Separator layoutX="5.0" layoutY="236.0" prefHeight="0.0" prefWidth="266.0" />
+                        <DatePicker fx:id="t1DatePicker" layoutX="62.0" layoutY="7.0" promptText="등록일 선택" />
+                        <TextField fx:id="t1TextName" layoutX="40.0" layoutY="36.0" prefHeight="23.0" prefWidth="69.0" />
+                        <ComboBox fx:id="t1CmbGrade" layoutX="114.0" layoutY="36.0" prefHeight="23.0" prefWidth="73.0" promptText="학년" />
+                        <ComboBox fx:id="t1CmbBan" layoutX="194.0" layoutY="36.0" prefHeight="23.0" prefWidth="73.0" promptText="반" />
+                        
+                       <fx:define><ToggleGroup fx:id = "group" /></fx:define>
+                        
+                        <RadioButton fx:id="t1RdoMale" layoutX="42.0" layoutY="67.0" mnemonicParsing="false" text="남자" userData="남자">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="group" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="t1RdoFemale" layoutX="92.0" layoutY="67.0" mnemonicParsing="false" text="여자" toggleGroup="$group" userData="여자" />
+                        <TextField fx:id="t1TextNo" layoutX="190.0" layoutY="65.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1TextKorean" layoutX="40.0" layoutY="95.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1TextMath" layoutX="40.0" layoutY="125.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1TextSoc" layoutX="40.0" layoutY="155.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1TextEnglish" layoutX="160.0" layoutY="95.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1TextSci" layoutX="160.0" layoutY="125.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1Textmus" layoutX="160.0" layoutY="155.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1Textsum" layoutX="40.0" layoutY="206.0" prefHeight="23.0" prefWidth="69.0" />
+                        <TextField fx:id="t1Textavg" layoutX="158.0" layoutY="206.0" prefHeight="23.0" prefWidth="69.0" />
+                        <Button fx:id="t1Btnsum" layoutX="3.0" layoutY="251.0" mnemonicParsing="false" text="총점" />
+                        <Button fx:id="t1Btnavg" layoutX="75.0" layoutY="251.0" mnemonicParsing="false" text="평균" />
+                        <Button fx:id="t1Btnclear" layoutX="139.0" layoutY="251.0" mnemonicParsing="false" text="초기화" />
+                        <Button fx:id="t1BtnReg" layoutX="219.0" layoutY="251.0" mnemonicParsing="false" text="등록" />
+                        <Button fx:id="t1BtnEdit" layoutX="45.0" layoutY="284.0" mnemonicParsing="false" text="수정" />
+                        <Button fx:id="t1BtnDel" layoutX="109.0" layoutY="284.0" mnemonicParsing="false" text="삭제" />
+                        <Button fx:id="t1BtnExit" layoutX="175.0" layoutY="284.0" mnemonicParsing="false" text="종료" />
+                        <Label layoutX="311.0" layoutY="11.0" text="성적테이블" />
+                        <TableView fx:id="t1TableView" layoutX="269.0" layoutY="36.0" prefHeight="634.0" prefWidth="817.0">
+                          <columns>
+                              <TableColumn prefWidth="50.0" text="학번" />
+                            <TableColumn prefWidth="50.0" text="성명" />
+                            <TableColumn prefWidth="35.0" text="학년" />
+                              <TableColumn prefWidth="30.0" text="반" />
+                              <TableColumn prefWidth="30.0" text="성별" />
+                              <TableColumn prefWidth="45.0" text="국어" />
+                              <TableColumn prefWidth="45.0" text="영어" />
+                              <TableColumn prefWidth="45.0" text="수학" />
+                              <TableColumn prefWidth="45.0" text="과학" />
+                              <TableColumn prefWidth="45.0" text="사회" />
+                              <TableColumn prefWidth="45.0" text="음악" />
+                              <TableColumn prefWidth="45.0" text="총점" />
+                              <TableColumn prefWidth="45.0" text="평균" />
+                              <TableColumn text="등록일" />
+                              <TableColumn prefWidth="172.0" text="이미지" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="1.0" layoutY="67.0" text="성별 : " />
+                        <TextField fx:id="t1TextSearch" layoutX="382.0" layoutY="7.0" promptText="이름 입력" />
+                        <Button fx:id="t1BtnSearch" layoutX="520.0" layoutY="7.0" mnemonicParsing="false" text="검색" />
+                        <Button fx:id="t1BtnBarChart" layoutX="570.0" layoutY="7.0" mnemonicParsing="false" text="바차트" />
+                        <Label layoutX="151.0" layoutY="68.0" text="번호 : " />
+                        <ImageView fx:id="t1ImageView" fitHeight="270.0" fitWidth="200.0" layoutX="29.0" layoutY="328.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../images/bagicimage.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="t1BtnImage" layoutX="75.0" layoutY="647.0" mnemonicParsing="false" text="이미지 파일 선택" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="두번째 화면">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="tab2BtnSecond" layoutX="59.0" layoutY="68.0" mnemonicParsing="false" text="두번째 화면" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="세번째 화면">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="tab3BtnThird" layoutX="93.0" layoutY="88.0" mnemonicParsing="false" text="세번째 화면" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
